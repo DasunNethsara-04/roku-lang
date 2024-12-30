@@ -1,2 +1,2 @@
 PRINT "Hello World";
-ADD 5 6;
+ADD 5 a;
