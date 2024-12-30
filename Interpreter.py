@@ -1,5 +1,5 @@
 # imports
-from Arithmatic import ArithmeticOperations
+from Arithmetic import ArithmeticOperations
 from util import Util
 
 class Interpreter:
@@ -23,7 +23,7 @@ class Interpreter:
         try: 
             token: list[str] = line.split()
         except TypeError:
-            return TypeError("Invalid")
+            return TypeError("Invalid input format")
         return token
     
     def parser(self, token) -> None:
@@ -36,19 +36,19 @@ class Interpreter:
             elif token[0] == "PRINT":
                 print((" ").join(token[1:]))
             elif token[0] == "ADD":
-                result = self.armt.add(token[1:])
+                result: int | float | ValueError = self.armt.add(token[1:])
                 print(result)
             elif token[0] == "SUB":
-                result = self.armt.subtract(token[1:])
+                result: int | float | ValueError = self.armt.subtract(token[1:])
                 print(result)
             elif token[0] == "MUL":
-                result = self.armt.multiply(token[1:])
+                result: int | float | ValueError = self.armt.multiply(token[1:])
                 print(result)
             elif token[0] == "DIV":
-                result = self.armt.divide(token[1], token[2])
+                result: int | float | ValueError = self.armt.divide(token[1], token[2])
                 print(result)
             elif token[0] == "MOD":
-                result = self.armt.modulus(token[1], token[2])
+                result: int | float | ValueError = self.armt.modulus(token[1], token[2])
                 print(result)
         except Exception as e:
             print(self.util.colorize_text("error", f"Error: {str(e)}"))
