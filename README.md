@@ -48,7 +48,7 @@ Create a `.rk` script file (e.g., `program1.rk`) and write your RokuLang code.
 
 ### Step 4: Run the Interpreter
 ```bash
-python main.py program1.rk
+python3 main.py program1.rk # `python main.py program1.rk` in windows
 ```
 
 ## RokuLang Commands
