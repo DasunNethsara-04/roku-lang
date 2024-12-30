@@ -38,6 +38,10 @@ cd roku-lang
 
 ### Step 2: Prepare Your Environment
 Ensure you have Python 3.10 or higher installed.
+1. Install the required dependencies for the interpreter
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### Step 3: Write Your Script
 Create a `.rk` script file (e.g., `program1.rk`) and write your RokuLang code.
