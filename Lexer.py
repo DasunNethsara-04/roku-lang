@@ -35,6 +35,10 @@ class Lexer:
                     number += self.content[self.cursor]
                     self.cursor += 1
                 self.tokens.append({"type": "NUMBER", "value": number})
+                
+            elif char == Keywords.SEMICOLON.value:
+                self.tokens.append({"type": "SEMICOLON", "value": char})
+                self.cursor += 1
             
             # Handle operators
             elif char in (op.value for op in Keywords if op.name.isupper() and "ASSIGN" not in op.name):
