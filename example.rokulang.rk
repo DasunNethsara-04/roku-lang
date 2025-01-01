@@ -1,0 +1,13 @@
+// this is a comment
+
+// output
+print("Hello");
+
+// this is variable declaration
+let number = 10;
+
+// constant
+final let pi = 3.14;
+
+// input
+let number = input().cast().parseInt();
